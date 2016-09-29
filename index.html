@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="../skeleton.css">
+    <script type="text/javascript">
+        ymaps.ready(init);
+        var myMap,
+                myPlacemark;
+
+        function init(){
+            myMap = new ymaps.Map("map", {
+                center: [59.97281209, 30.34194294],
+                zoom: 18
+            });
+
+            myPlacemark = new ymaps.Placemark([59.97281209, 30.34194294], {
+                hintContent: 'Место встречи',
+                balloonContent: 'Тобольская, 6'
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
+    <title>Photoset с коллегами</title>
+</head>
+<body>
+<div>
+    <h2>"Photoset с коллегами"</h2>
+    <p>"Если не найдем штатив, то на принтер мы будем ставить фотоаппарат Клюквиной :)"</p>
+    <img src="img/canon60D.jpg" alt="[Фото]" />
+</div>
+
+<div>
+    <h3>3 октября 2016 года</h3>
+    <h5>Санкт-Петербург, ул. Тобольская д.6, 10 этаж</h5>
+</div>
+<div><h3>Участники</h3>
+    <ul><li>Настя</li>
+        <li>Света</li>
+        <li>Алёна</li>
+        <li>Оксана</li>
+        <li>Анна</li>
+        <li>Боря</li>
+        <li>Евгений</li>
+        <li>Аня</li>
+        <li>Маша</li>
+        <li>Лена</li>
+        <li>Аня</li>
+        <li>MC Константиновна</li>
+        <li>Львовна</li>
+    </ul>
+</div>
+<div>
+    <h3>План мероприятия:</h3>
+    <ul><li>Обед в дружеской обстановке:</li>
+        <img src="img/obed.png" alt="[Фото]" />
+        <br>
+        <br>
+        <li>Общая фотография на память:</li>
+        <img src="img/allfoto.jpg" width="600" height="450" alt="[Фото]" />
+    </ul>
+</div>
+
+<div><h3>Координаты на карте:</h3></div>
+<div id="map" style="width: 600px; height: 400px"></div>
+<br>
+<div>
+<a href="https://ru.wikipedia.org/wiki/HTTP_404">Запись на мероприятие (ссылка в доработке в данный момент)</a>
+</div>
+<br>
+</body>
+</html>
